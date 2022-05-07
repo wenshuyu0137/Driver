@@ -1,0 +1,1 @@
+cmd_/home/wsy/driver/led_gpio_pinctrl/led_gpio_pinctrl.ko := arm-ostl-linux-gnueabi-ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/wsy/driver/led_gpio_pinctrl/led_gpio_pinctrl.ko /home/wsy/driver/led_gpio_pinctrl/led_gpio_pinctrl.o /home/wsy/driver/led_gpio_pinctrl/led_gpio_pinctrl.mod.o;  true

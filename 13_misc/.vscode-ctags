@@ -1,0 +1,54 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CONFIG_MODULE_SIG	Makefile	/^CONFIG_MODULE_SIG=n$/;"	m
+COUNT	driver.c	22;"	d	file:
+KERNELDIR	Makefile	/^	KERNELDIR ?= \/home\/wsy\/fs-mp1a\/stm32mp1-openstlinux-5.4-dunfell-mp1-20-06-24\/sources\/arm-ostl-linux-gnueabi\/linux-stm32mp-5.4.31-r0\/linux-5.4.31$/;"	m
+KERNELDIR	Makefile	/^	KERNELDIR ?= \/lib\/modules\/$(shell uname -r)\/build$/;"	m
+KEY_INVALUE	driver.c	25;"	d	file:
+KEY_NUM	driver.c	24;"	d	file:
+NAME	driver.c	23;"	d	file:
+PWD	Makefile	/^PWD := $(shell pwd)$/;"	m
+ROOTFS	Makefile	/^	ROOTFS ?= \/source\/rootfs$/;"	m
+cdev	driver.c	/^    struct cdev cdev;$/;"	m	struct:device_desc	typeref:struct:device_desc::cdev	file:
+class	driver.c	/^    struct class *class;$/;"	m	struct:device_desc	typeref:struct:device_desc::class	file:
+dev_exit	driver.c	/^module_exit(dev_exit);$/;"	v
+dev_exit	driver.c	/^static void __exit dev_exit(void)$/;"	f	file:
+dev_fop	driver.c	/^static const struct file_operations dev_fop = {$/;"	v	typeref:struct:file_operations	file:
+dev_id	driver.c	/^    dev_t dev_id;$/;"	m	struct:device_desc	file:
+dev_init	driver.c	/^module_init(dev_init);$/;"	v
+dev_init	driver.c	/^static int __init dev_init(void)$/;"	f	file:
+dev_open	driver.c	/^static int dev_open(struct inode *nodep,struct file *filep)$/;"	f	file:
+dev_read	driver.c	/^static ssize_t dev_read(struct file *filep,char __user *buf,size_t count,loff_t *loffp)$/;"	f	file:
+dev_release	driver.c	/^static int dev_release(struct inode *nodep,struct file *filep)$/;"	f	file:
+device	driver.c	/^    struct device *device;$/;"	m	struct:device_desc	typeref:struct:device_desc::device	file:
+device_desc	driver.c	/^struct device_desc{$/;"	s	file:
+device_init	driver.c	/^static int device_init(void)$/;"	f	file:
+fd	app.c	/^    close(fd);$/;"	v
+flags	driver.c	/^    unsigned long flags;                        \/*Trigger mode*\/$/;"	m	struct:key_desc	file:
+gpio	driver.c	/^    int gpio;                                   \/*gpio id*\/$/;"	m	struct:key_desc	file:
+gpio	driver.c	/^    int gpio;$/;"	m	struct:device_desc	file:
+handler	driver.c	/^    irqreturn_t (*handler)(int,void*);          \/*irq function*\/$/;"	m	struct:key_desc	file:
+init_irq	driver.c	/^static int init_irq(struct device_desc *dev)$/;"	f	file:
+init_key	driver.c	/^static int init_key(struct device_desc *dev)$/;"	f	file:
+init_timer	driver.c	/^static void init_timer(struct device_desc *dev)$/;"	f	file:
+irq	driver.c	/^    int irq;                                    \/*irq id*\/$/;"	m	struct:key_desc	file:
+key0_irq_handler	driver.c	/^static irqreturn_t key0_irq_handler(int irq, void* dev)$/;"	f	file:
+key_desc	driver.c	/^struct key_desc {$/;"	s	file:
+lock	driver.c	/^    spinlock_t lock;$/;"	m	struct:device_desc	file:
+main	app.c	/^int main(int argc, const char *argv[])$/;"	f
+major	driver.c	/^    int major;$/;"	m	struct:device_desc	file:
+minor	driver.c	/^    int minor;$/;"	m	struct:device_desc	file:
+my_device	driver.c	/^}my_device;$/;"	v	typeref:struct:device_desc
+my_key	driver.c	/^    struct key_desc my_key[KEY_NUM];$/;"	m	struct:device_desc	typeref:struct:device_desc::key_desc	file:
+name	driver.c	/^    char name[10];                              \/*key name*\/$/;"	m	struct:key_desc	file:
+node	driver.c	/^    struct device_node *node;$/;"	m	struct:device_desc	typeref:struct:device_desc::device_node	file:
+obj-m	Makefile	/^obj-m := driver.o$/;"	m
+period	driver.c	/^    volatile unsigned long period;$/;"	m	struct:timer_desc	file:
+time_args	driver.c	/^    struct timer_desc time_args;$/;"	m	struct:device_desc	typeref:struct:device_desc::timer_desc	file:
+timer	driver.c	/^    struct timer_list timer;$/;"	m	struct:device_desc	typeref:struct:device_desc::timer_list	file:
+timer_desc	driver.c	/^struct timer_desc {$/;"	s	file:
+timer_function	driver.c	/^static void timer_function(struct timer_list *t)$/;"	f	file:

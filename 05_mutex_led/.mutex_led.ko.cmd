@@ -1,0 +1,1 @@
+cmd_/home/wsy/driver/mutex_led/mutex_led.ko := arm-ostl-linux-gnueabi-ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/wsy/driver/mutex_led/mutex_led.ko /home/wsy/driver/mutex_led/mutex_led.o /home/wsy/driver/mutex_led/mutex_led.mod.o;  true

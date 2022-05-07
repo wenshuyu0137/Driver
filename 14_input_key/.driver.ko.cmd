@@ -1,0 +1,1 @@
+cmd_/home/wsy/driver/14_input_key/driver.ko := arm-ostl-linux-gnueabi-ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/wsy/driver/14_input_key/driver.ko /home/wsy/driver/14_input_key/driver.o /home/wsy/driver/14_input_key/driver.mod.o;  true

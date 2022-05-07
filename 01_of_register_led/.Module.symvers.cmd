@@ -1,0 +1,1 @@
+cmd_/home/wsy/driver/of_led/Module.symvers := sed 's/\.ko$$/\.o/' /home/wsy/driver/of_led/modules.order | scripts/mod/modpost -m -a  -o /home/wsy/driver/of_led/Module.symvers -e -i Module.symvers   -T -

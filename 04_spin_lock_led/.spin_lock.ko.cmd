@@ -1,0 +1,1 @@
+cmd_/home/wsy/driver/spin_lock_led/spin_lock.ko := arm-ostl-linux-gnueabi-ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/wsy/driver/spin_lock_led/spin_lock.ko /home/wsy/driver/spin_lock_led/spin_lock.o /home/wsy/driver/spin_lock_led/spin_lock.mod.o;  true
