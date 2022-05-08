@@ -1,0 +1,12 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CONFIG_MODULE_SIG	Makefile	/^CONFIG_MODULE_SIG=n$/;"	m
+KERNELDIR	Makefile	/^	KERNELDIR ?= \/home\/wsy\/fs-mp1a\/stm32mp1-openstlinux-5.4-dunfell-mp1-20-06-24\/sources\/arm-ostl-linux-gnueabi\/linux-stm32mp-5.4.31-r0\/linux-5.4.31$/;"	m
+KERNELDIR	Makefile	/^	KERNELDIR ?= \/lib\/modules\/$(shell uname -r)\/build$/;"	m
+PWD	Makefile	/^PWD := $(shell pwd)$/;"	m
+ROOTFS	Makefile	/^	ROOTFS ?= \/source\/rootfs$/;"	m
+obj-m	Makefile	/^obj-m := automic_led.o$/;"	m
