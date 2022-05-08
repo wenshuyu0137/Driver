@@ -1,1 +1,0 @@
-cmd_/home/wsy/driver/itc_timer_key/driver.ko := arm-ostl-linux-gnueabi-ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/wsy/driver/itc_timer_key/driver.ko /home/wsy/driver/itc_timer_key/driver.o /home/wsy/driver/itc_timer_key/driver.mod.o;  true

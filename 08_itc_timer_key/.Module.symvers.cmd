@@ -1,1 +1,0 @@
-cmd_/home/wsy/driver/itc_timer_key/Module.symvers := sed 's/\.ko$$/\.o/' /home/wsy/driver/itc_timer_key/modules.order | scripts/mod/modpost -m -a  -o /home/wsy/driver/itc_timer_key/Module.symvers -e -i Module.symvers   -T -
