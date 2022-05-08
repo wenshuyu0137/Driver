@@ -1,1 +1,0 @@
-cmd_/home/wsy/driver/10_irq_nonblock/driver.ko := arm-ostl-linux-gnueabi-ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/wsy/driver/10_irq_nonblock/driver.ko /home/wsy/driver/10_irq_nonblock/driver.o /home/wsy/driver/10_irq_nonblock/driver.mod.o;  true
