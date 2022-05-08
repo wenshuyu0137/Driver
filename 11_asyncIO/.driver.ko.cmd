@@ -1,1 +1,0 @@
-cmd_/home/wsy/driver/11_asyncIO/driver.ko := arm-ostl-linux-gnueabi-ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/wsy/driver/11_asyncIO/driver.ko /home/wsy/driver/11_asyncIO/driver.o /home/wsy/driver/11_asyncIO/driver.mod.o;  true
