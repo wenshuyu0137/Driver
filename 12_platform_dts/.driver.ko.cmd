@@ -1,1 +1,0 @@
-cmd_/home/wsy/driver/12_platform_dts/driver.ko := arm-ostl-linux-gnueabi-ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/wsy/driver/12_platform_dts/driver.ko /home/wsy/driver/12_platform_dts/driver.o /home/wsy/driver/12_platform_dts/driver.mod.o;  true
