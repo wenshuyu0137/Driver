@@ -1,1 +1,0 @@
-cmd_/home/wsy/driver/semaphore_led/semaphore_led.ko := arm-ostl-linux-gnueabi-ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/wsy/driver/semaphore_led/semaphore_led.ko /home/wsy/driver/semaphore_led/semaphore_led.o /home/wsy/driver/semaphore_led/semaphore_led.mod.o;  true
