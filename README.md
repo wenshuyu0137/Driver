@@ -2,3 +2,4 @@ driver.c是驱动层
 app.c是应用层
 Template文件夹是我之前没用platform时候写的一个框架
 platfo_template是用了platform的框架，不过框架比较简单
+Makefile里面的路径记得自己改一下，根据自己实际情况来
