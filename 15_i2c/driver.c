@@ -109,20 +109,20 @@ void AP3216C_readdata(struct AP3216C_device *dev)
 	unsigned char i =0;
 	unsigned char buf[6];
 
-	/* 循环读取所有传感器数据 */
+	
 	for(i = 0; i < 6; i++) {
 		buf[i] = AP3216C_read_one_reg(dev, IR_Data_Low + i); 
 	}
-	if(buf[0] & 0X80) /* IR_OF 位为 1,则数据无效 */
+	if(buf[0] & 0X80) 
 	dev->ir = 0; 
-	else /* 读取 IR 传感器的数据 */
+	else 
 	dev->ir = ((unsigned short)buf[1] << 2) | (buf[0] & 0X03); 
 
 	dev->als = ((unsigned short)buf[3] << 8) | buf[2]; 
 
-	if(buf[4] & 0x40) /* IR_OF 位为 1,则数据无效 */
+	if(buf[4] & 0x40) 
 	dev->ps = 0; 
-	else /* 读取 PS 传感器的数据 */
+	else 
 	dev->ps = ((unsigned short)(buf[5] & 0X3F) << 4) | (buf[4] &0X0F);
 }
 
