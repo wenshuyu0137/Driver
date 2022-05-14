@@ -6,21 +6,15 @@
 #include <linux/module.h>
 #include <linux/errno.h>
 #include <linux/gpio.h>
-#include <linux/semaphore.h>
-#include <linux/irq.h>
-#include <asm/uaccess.h>
-#include <linux/io.h>
-#include <linux/fs.h>
-#include <linux/slab.h>
 #include <linux/cdev.h>
 #include <linux/device.h>
-#include <linux/of.h>
-#include <linux/of_address.h>
-#include <linux/of_irq.h>
 #include <linux/of_gpio.h>
-#include <linux/platform_device.h>
-#include <linux/miscdevice.h>
+#include <linux/semaphore.h>
+#include <linux/timer.h>
 #include <linux/i2c.h>
+#include <asm/mach/map.h>
+#include <asm/uaccess.h>
+#include <asm/io.h>
 #include <linux/spi/spi.h>
 #include <linux/string.h>
 

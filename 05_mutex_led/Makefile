@@ -7,6 +7,6 @@ obj-m := driver.o
 build: kernel_modules
 
 kernel_modules: 
-	$(MAKE) -C $(KERNELDIR) M=$(CURRENT_PATH) modules
+	$(MAKE) -C $(KERNELDIR) M=$(CURRENT_PATH) modules ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabihf-
 clean:
-	$(MAKE) -C $(KERNELDIR) M=$(CURRENT_PATH) clean
+	$(MAKE) -C $(KERNELDIR) M=$(CURRENT_PATH) clean ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabihf-
