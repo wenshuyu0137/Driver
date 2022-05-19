@@ -16,11 +16,7 @@ static int get_data(const char *file,char *databuf)
         return -1;
     }
     ret = fread(databuf,1,50,fd);
-    /*if(!ret) { 
-        printf("read fail\n");
-    }else */if(ret == EOF){
-        fseek(fd, 0, SEEK_SET);
-    }
+    
     fclose(fd);
     if(fd<0){
         printf("device close error\n");
