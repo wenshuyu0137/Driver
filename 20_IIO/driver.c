@@ -143,80 +143,10 @@ static int ap3216c_read_raw(struct iio_dev *indio_dev,struct iio_chan_spec const
     return ret;
 }
 
-static int ap3216c_write_raw_get_fmt(struct iio_dev *indio_dev,struct iio_chan_spec const *chan,long mask)
-{
-    /*red different mask data*/
-    switch(mask){
-        case IIO_CHAN_INFO_SCALE:
-            return IIO_VAL_INT_PLUS_MICRO;
-        default:
-            return IIO_VAL_INT_PLUS_MICRO;
-    }
-}
 
-static int ap3216c_write_chanel_scale(struct iio_dev *indio_dev,const struct iio_chan_spec *i2c_channels,int val2)
-{ 
-    int ret;
-    static int i;
-    unsigned int buf;
-    struct AP3216C_device *dev = iio_priv(indio_dev);
-    regmap_read(dev->regmap,0x10,&buf);
-    pr_info("val2 = %d\n",val2);
-    pr_info("buf = %#x\n",buf);
-    pr_info("i = %d\n",i++);
-    switch(i2c_channels->type){
-        case IIO_LIGHT:
-            pr_info("don't know\n");       
-            break;
-        case IIO_INTENSITY:
-            switch(val2){
-                case 350000:
-                    regmap_write(dev->regmap,(unsigned char)0x10,((buf|0x30) & (~0x30)));
-                    break;
-                case 78800:
-                    regmap_write(dev->regmap,(unsigned char)0x10,((buf|0x30) & (~0x20)));
-                    break;
-                case 17900:
-                    regmap_write(dev->regmap,(unsigned char)0x10,((buf|0x30) & (~0x10)));
-                    break;
-                case 4900:
-                    regmap_write(dev->regmap,(unsigned char)0x10,((buf|0x30) & (~0x00)));
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case IIO_PROXIMITY:
-            pr_info("don't know\n");       
-            break;
-        default:
-            ret = -EINVAL;
-            break;
-    }  
-    return ret;
-}
-static int ap3216c_write_raw(struct iio_dev *indio_dev,struct iio_chan_spec const *chan,int val,int val2,long mask)
-{  
-    int ret;
-    struct AP3216C_device *dev = iio_priv(indio_dev);
-
-    /*write different mask data*/
-    switch(mask){
-        case IIO_CHAN_INFO_SCALE:
-            mutex_lock(&dev->lock);
-            ap3216c_write_chanel_scale(indio_dev,chan,val2);
-            mutex_unlock(&dev->lock);
-            return IIO_VAL_INT_PLUS_MICRO;
-        default:
-            ret = -EINVAL;
-    }
-    return ret;
-}
 
 static const struct iio_info AP3216C_info = {
     .read_raw = ap3216c_read_raw,
-    .write_raw = ap3216c_write_raw,
-    .write_raw_get_fmt = ap3216c_write_raw_get_fmt,
 };
 
 
