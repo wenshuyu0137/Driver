@@ -1,4 +1,0 @@
-driver.c是驱动层
-app.c是应用层
-Template是一些大致的框架
-Makefile里面的路径记得自己改一下，根据自己实际情况来
